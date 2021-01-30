@@ -6,7 +6,7 @@ $(document).ready(() => {
 
 
   $('#pick-candidate-button').on('click', () => {
-    $('#needle').toggleClass('spinning')
+    $('#needle-container').toggleClass('spinning')
     $('#candidate').text(pickCandidate())
   })
 })
