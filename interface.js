@@ -1,4 +1,10 @@
 $(document).ready(() => {
+
+  const setSliceAngle = (num) => {
+    const angle = 360 / num
+    document.querySelector(':root').style.setProperty('--angle', `${angle}deg`)
+  }
+
   minRotation = 1080
   maxRotation = 1440
 
@@ -19,4 +25,6 @@ $(document).ready(() => {
     $('#needle-container').toggleClass('spinning')
     toggleButtonText()
   })
+
+  setSliceAngle(12)
 })
