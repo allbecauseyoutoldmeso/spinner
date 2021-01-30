@@ -9,8 +9,14 @@ $(document).ready(() => {
     document.querySelector(':root').style.setProperty('--rotation', `${rotation()}deg`)
   }
 
-  $('#pick-candidate-button').on('click', () => {
+  const toggleButtonText = () => {
+    newText = $('#spin-button').html() == 'spin' ? 'reset' : 'spin'
+    $('#spin-button').html(newText)
+  }
+
+  $('#spin-button').on('click', () => {
     setRotation()
     $('#needle-container').toggleClass('spinning')
+    toggleButtonText()
   })
 })

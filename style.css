@@ -2,11 +2,13 @@ body {
   font-family: Arial;
 }
 
-.spinner-button {
+.spin-button {
   background-color: red;
   border: none;
   border-radius: 4px;
   color: white;
+  padding: 8px;
+  font-size: 16px;
 }
 
 .circle {
