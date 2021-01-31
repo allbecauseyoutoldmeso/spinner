@@ -1,7 +1,14 @@
 $(document).ready(() => {
+  const candidates = ['1', '2', '3', '4', '5', '6', '7', '8']
+
+  const setCandidates = () => {
+    candidates.forEach((candidate) => {
+      $('#candidates').append(`<li><div class='slice'>${candidate}</div></li>`)
+    })
+  }
 
   const setSliceAngle = (num) => {
-    const angle = 360 / num
+    const angle = (360 / candidates.length)
     document.querySelector(':root').style.setProperty('--angle', `${angle}deg`)
   }
 
@@ -26,5 +33,6 @@ $(document).ready(() => {
     toggleButtonText()
   })
 
+  setCandidates()
   setSliceAngle(12)
 })
