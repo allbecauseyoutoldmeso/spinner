@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const candidates = ['1', '2', '3', '4', '5', '6']
+  const candidates = ['kate', 'sally', 'maddie', 'sylvia', 'granny']
 
   const setCandidates = () => {
     candidates.forEach((candidate) => {
@@ -42,3 +42,6 @@ $(document).ready(() => {
   setSliceAngle()
   setSliceSkew()
 })
+
+
+// nb could just set candidate count as css variable and use calc() to get slice angle and skew!
