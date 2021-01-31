@@ -1,5 +1,5 @@
 $(document).ready(() => {
-  const candidates = ['1', '2', '3', '4', '5', '6', '7', '8']
+  const candidates = ['1', '2', '3', '4', '5', '6']
 
   const setCandidates = () => {
     candidates.forEach((candidate) => {
@@ -7,7 +7,12 @@ $(document).ready(() => {
     })
   }
 
-  const setSliceAngle = (num) => {
+  const setSliceSkew = () => {
+    const skew = (360 / candidates.length) - 90
+    document.querySelector(':root').style.setProperty('--skew', `${skew}deg`)
+  }
+
+  const setSliceAngle = () => {
     const angle = (360 / candidates.length)
     document.querySelector(':root').style.setProperty('--angle', `${angle}deg`)
   }
@@ -34,5 +39,6 @@ $(document).ready(() => {
   })
 
   setCandidates()
-  setSliceAngle(12)
+  setSliceAngle()
+  setSliceSkew()
 })

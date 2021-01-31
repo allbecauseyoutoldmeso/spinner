@@ -70,45 +70,44 @@ li {
 	width: 50%; height: 50%;
 	transform-origin: 0% 100%;
   border-left: solid 1px #F9CDAD;
-  /* border-bottom: solid 1px black; */
   list-style-type: none;
 }
 
 li:first-child {
-	transform: rotate(calc(0 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(0 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(2) {
-	transform: rotate(calc(1 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(1 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(3) {
-	transform: rotate(calc(2 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(2 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(4) {
-	transform: rotate(calc(3 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(3 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(5) {
-	transform: rotate(calc(4 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(4 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(6) {
-	transform: rotate(calc(5 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(5 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(7) {
-	transform: rotate(calc(6 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(6 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(8) {
-	transform: rotate(calc(7 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(7 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(9) {
-	transform: rotate(calc(8 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(8 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(10) {
-	transform: rotate(calc(9 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(9 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(11) {
-	transform: rotate(calc(10 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(10 * var(--angle))) skewY(var(--skew));
 }
 li:nth-child(12) {
-	transform: rotate(calc(11 * var(--angle))) skewY(-60deg);
+	transform: rotate(calc(11 * var(--angle))) skewY(var(--skew));
 }
 
 .slice {
