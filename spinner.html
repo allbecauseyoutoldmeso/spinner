@@ -5,17 +5,23 @@
     <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    <form id='add-player-form'>
-      <input type='text' id='new-player'>
-      <input type='submit' value='add player' class='button'>
-    </form>
-    <div class='circle'>
-      <ul id='players'></ul>
-      <div class='needle-container' id='needle-container'>
-        <div class='needle' id='needle'></div>
+    <div class='flex-direction-row'>
+      <div class='flex-direction-column spinner'>
+        <div class='circle'>
+          <ul id='players'></ul>
+          <div class='needle-container' id='needle-container'>
+            <div class='needle' id='needle'></div>
+          </div>
+        </div>
+        <button id='spin-button' class='button'>spin</button>
       </div>
+      <form id='add-player-form'>
+        <div class='flex-direction-column'>
+          <input type='text' id='new-player'>
+          <input type='submit' value='add player' class='button'>
+        </div>
+      </form>
     </div>
-    <button id='spin-button' class='button'>spin</button>
     <script src='https://code.jquery.com/jquery-2.1.4.min.js'></script>
     <script src='interface.js'></script>
   </body>

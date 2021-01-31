@@ -1,15 +1,41 @@
+.flex-direction-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-direction-column {
+  display: flex;
+  flex-direction: column;
+}
+
 body {
   font-family: Arial;
   background-color: #83AF9B;
+  padding: 20px;
 }
 
 .button {
   background-color: #FE4365;
-  border: solid 4px #F9CDAD;
+  border: solid 2px #F9CDAD;
   border-radius: 4px;
   color: #F9CDAD;
   padding: 8px;
   font-size: 20px;
+  width: fit-content;
+  margin: 20px 0;
+}
+
+input[type=text] {
+  border: solid 2px #FE4365;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.spinner {
+  align-items: center;
+  margin-right: 20px;
 }
 
 .circle {
@@ -44,10 +70,6 @@ body {
   animation-fill-mode: forwards;
 }
 
-.spinning {
-  animation-name: rotate;
-}
-
 .needle {
   background: #F9CDAD;
   height: 45%;
@@ -56,6 +78,10 @@ body {
   top: 5%;
   transform-origin: 50% 100%;
   width: 2%;
+}
+
+.spinning {
+  animation-name: rotate;
 }
 
 @keyframes rotate {
@@ -118,11 +144,4 @@ li:nth-child(12) {
   transform: skewY(calc(90deg - var(--angle))) rotate(calc(var(--angle) / 2));
   padding-top: 20px;
   color: #F9CDAD;
-}
-
-input[type=text] {
-  border: solid 4px #FE4365;
-  border-radius: 4px;
-  padding: 8px;
-  font-size: 20px;
 }

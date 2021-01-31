@@ -5,7 +5,7 @@ $(document).ready(() => {
     $('#players').append(`<li><div class='slice'>${player}</div></li>`)
   }
 
-  const setPlayers = () => {
+  const addPlayers = () => {
     players.forEach((player) => {
       addPlayer(player)
     })
@@ -43,8 +43,8 @@ $(document).ready(() => {
     setAngle()
   })
 
-  setPlayers()
+  addPlayers()
   setAngle()
 })
 
-// why don't 1 or 2 players work?
+// 1, 2 and >12 players don't work.
