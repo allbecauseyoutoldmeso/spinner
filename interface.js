@@ -1,14 +1,14 @@
 $(document).ready(() => {
-  const candidates = ['kate', 'sally', 'maddie', 'sylvia', 'granny']
+  const players = ['kate', 'sally', 'maddie', 'sylvia', 'granny']
 
-  const setCandidates = () => {
-    candidates.forEach((candidate) => {
-      $('#candidates').append(`<li><div class='slice'>${candidate}</div></li>`)
+  const setPlayers = () => {
+    players.forEach((player) => {
+      $('#players').append(`<li><div class='slice'>${player}</div></li>`)
     })
   }
 
   const setAngle = () => {
-    const angle = (360 / candidates.length)
+    const angle = (360 / players.length)
     document.querySelector(':root').style.setProperty('--angle', `${angle}deg`)
   }
 
@@ -34,7 +34,7 @@ $(document).ready(() => {
   })
 
   setAngle()
-  setCandidates()
+  setPlayers()
 })
 
-// why don't 1 or 2 candidates work?
+// why don't 1 or 2 players work?
