@@ -7,12 +7,7 @@ $(document).ready(() => {
     })
   }
 
-  const setSliceSkew = () => {
-    const skew = (360 / candidates.length) - 90
-    document.querySelector(':root').style.setProperty('--skew', `${skew}deg`)
-  }
-
-  const setSliceAngle = () => {
+  const setAngle = () => {
     const angle = (360 / candidates.length)
     document.querySelector(':root').style.setProperty('--angle', `${angle}deg`)
   }
@@ -38,10 +33,8 @@ $(document).ready(() => {
     toggleButtonText()
   })
 
+  setAngle()
   setCandidates()
-  setSliceAngle()
-  setSliceSkew()
 })
 
-
-// nb could just set candidate count as css variable and use calc() to get slice angle and skew!
+// why don't 1 or 2 candidates work?
