@@ -3,7 +3,7 @@ body {
   background-color: #83AF9B;
 }
 
-.spin-button {
+.button {
   background-color: #FE4365;
   border: solid 4px #F9CDAD;
   border-radius: 4px;
@@ -118,4 +118,11 @@ li:nth-child(12) {
   transform: skewY(calc(90deg - var(--angle))) rotate(calc(var(--angle) / 2));
   padding-top: 20px;
   color: #F9CDAD;
+}
+
+input[type=text] {
+  border: solid 4px #FE4365;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 20px;
 }
