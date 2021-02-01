@@ -6,13 +6,14 @@ $(document).ready(() => {
   }
 
   const addPlayers = () => {
+    $('#players').empty()
     players.forEach((player) => {
       addPlayer(player)
     })
   }
 
   const setAngle = () => {
-    const angle = (360 / $('#players').children().length)
+    const angle = (360 / players.length)
     document.querySelector(':root').style.setProperty('--angle', `${angle}deg`)
   }
 
@@ -39,7 +40,8 @@ $(document).ready(() => {
 
   $('#add-player-form').submit((event) => {
     event.preventDefault()
-    addPlayer($('#new-player').val())
+    players.push($('#new-player').val())
+    addPlayers()
     setAngle()
   })
 

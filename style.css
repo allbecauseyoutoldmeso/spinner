@@ -26,7 +26,7 @@ body {
 }
 
 input[type=text] {
-  border: solid 2px #FE4365;
+  border: solid 1px #FE4365;
   border-radius: 4px;
   padding: 8px;
   font-size: 20px;
@@ -99,7 +99,7 @@ li {
   list-style-type: none;
 }
 
-li:first-child {
+li:nth-child(1) {
 	transform: rotate(calc(0 * var(--angle))) skewY(calc(var(--angle) - 90deg));
 }
 li:nth-child(2) {
