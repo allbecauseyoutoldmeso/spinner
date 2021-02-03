@@ -1,20 +1,28 @@
 $(document).ready(() => {
   const players = ['kate', 'sally', 'maddie', 'sylvia', 'granny']
 
-  const addPlayer = (player) => {
-    $('#players').append(`<li><div class='slice'>${player}</div></li>`)
+  const angle = () => 360 / players.length
+
+  const listTransform = (index) => {
+    return `rotate(${(index) * angle()}deg) skewY(${angle() - 90}deg)`
+  }
+
+  const sliceTransform = () => {
+    return `skewY(${90 - angle()}deg) rotate(${angle()/2}deg)`
   }
 
   const addPlayers = () => {
     $('#players').empty()
-    players.forEach((player) => {
-      addPlayer(player)
-    })
-  }
 
-  const setAngle = () => {
-    const angle = (360 / players.length)
-    document.querySelector(':root').style.setProperty('--angle', `${angle}deg`)
+    players.forEach((player, index) => {
+      $('#players').append(`
+        <li style='transform: ${listTransform(index)}'>
+          <div class='slice' style='transform: ${sliceTransform()}'>
+            ${player}
+          </div>
+        </li>
+      `)
+    })
   }
 
   minRotation = 1080
@@ -41,12 +49,12 @@ $(document).ready(() => {
   $('#add-player-form').submit((event) => {
     event.preventDefault()
     players.push($('#new-player').val())
+    $('#new-player').val('')
     addPlayers()
-    setAngle()
   })
 
   addPlayers()
-  setAngle()
 })
 
-// 1, 2 and >12 players don't work.
+// 1 and 2  players don't work.
+// removing players
