@@ -1,14 +1,28 @@
 $(document).ready(() => {
-  const players = ['kate', 'sally', 'maddie', 'sylvia', 'granny']
+  const players = []
 
   const angle = () => 360 / players.length
 
-  const listTransform = (index) => {
-    return `rotate(${(index) * angle()}deg) skewY(${angle() - 90}deg)`
+  const listStyle = (index) => {
+    switch(players.length) {
+      case 1:
+        return 'border: none'
+      case 2:
+        return `transform: rotate(${index * 180}deg)`
+      default:
+        return `transform: rotate(${index * angle()}deg) skewY(${angle() - 90}deg)`
+    }
   }
 
-  const sliceTransform = () => {
-    return `skewY(${90 - angle()}deg) rotate(${angle()/2}deg)`
+  const sliceStyle = () => {
+    switch(players.length) {
+      case 1:
+        return ''
+      case 2:
+        return 'transform: rotate(90deg)'
+      default:
+        return `transform: skewY(${90 - angle()}deg) rotate(${angle()/2}deg)`
+    }
   }
 
   const addPlayers = () => {
@@ -16,8 +30,8 @@ $(document).ready(() => {
 
     players.forEach((player, index) => {
       $('#players').append(`
-        <li style='transform: ${listTransform(index)}'>
-          <div class='slice' style='transform: ${sliceTransform()}'>
+        <li style='${listStyle(index)}'>
+          <div class='slice' style='${sliceStyle()}'>
             ${player}
           </div>
         </li>
@@ -56,5 +70,4 @@ $(document).ready(() => {
   addPlayers()
 })
 
-// 1 and 2  players don't work.
 // removing players

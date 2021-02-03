@@ -72,10 +72,10 @@ input[type=text] {
 
 .needle {
   background: #F9CDAD;
-  height: 45%;
+  height: 42%;
   left: 49%;
   position: absolute;
-  top: 5%;
+  top: 8%;
   transform-origin: 50% 100%;
   width: 2%;
 }
